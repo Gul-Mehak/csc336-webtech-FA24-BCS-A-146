@@ -173,6 +173,7 @@ footer p {
 	.cart-icon {
 		font-size: 22px;
 	}
+}
     /* Product Detail Page */
 
 .product-detail-img {
@@ -276,5 +277,4 @@ footer p {
 		text-align: center;
 		padding-bottom: 10px;
 	}
-}
 }

@@ -1,0 +1,62 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #ffffff;
+	color: #222222;
+}
+
+.navbar {
+	padding: 20px 0;
+	border-bottom: 1px solid #dddddd;
+}
+
+.navbar-brand {
+	font-size: 28px;
+	font-weight: bold;
+	letter-spacing: 3px;
+}
+
+.nav-link {
+	font-size: 16px;
+	margin: 0 12px;
+}
+
+.cart-icon {
+	font-size: 25px;
+}
+
+.product-card {
+	background-color: #f5eee8;
+	border: 1px solid #dddddd;
+	padding: 50px 20px;
+	text-align: center;
+	height: 100%;
+}
+
+.product-card h4 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.product-card p {
+	font-size: 17px;
+	margin-top: 15px;
+}
+
+/* Mobile Navbar */
+@media (max-width: 767px) {
+
+	.navbar-nav {
+		text-align: center;
+	}
+
+	.nav-link {
+		margin: 0;
+		padding: 10px;
+	}
+
+	.cart-icon {
+		display: block;
+		text-align: center;
+		padding: 10px;
+	}
+}
