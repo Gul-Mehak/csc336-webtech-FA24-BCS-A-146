@@ -279,10 +279,7 @@ footer p {
 	}
 }
 
-
-/* ==========================================
-   MIDTERM TASK 1 - CSS CATEGORY FILTER
-   ========================================== */
+/*MIDTERM TASK 1 - CSS CATEGORY FILTER*/
 
 /* Category Filter Container */
 .category-filter {
@@ -339,9 +336,8 @@ footer p {
 .category-filter:has(#formal:checked) .product-grid > :not(.formal) {
 	display: none;
 }
-/* ==========================================
-   MIDTERM TASK 2 - CSS GRID PRODUCT LAYOUT
-   ========================================== */
+
+/*MIDTERM TASK 2 - CSS GRID PRODUCT LAYOUT */
 
 /* Mobile Layout: Below 646px */
 .product-layout {
@@ -411,5 +407,59 @@ footer p {
 	/* Give Image Area Enough Height for Sticky Effect */
 	.product-image-area {
 		min-height: 100vh;
+	}
+}
+
+/* MIDTERM TASK 3 - SEARCH, SORT AND BADGES */
+
+/* Search and Sort Controls */
+.search-sort-controls {
+	display: flex;
+	gap: 15px;
+	margin-bottom: 25px;
+}
+
+.search-sort-controls .form-control {
+	flex: 1;
+	border-radius: 0;
+}
+
+.search-sort-controls .btn {
+	white-space: nowrap;
+}
+
+/* Hide products that do not match search */
+.product-grid > .search-hidden {
+	display: none !important;
+}
+
+/* No Products Found Message */
+#noProducts {
+	font-size: 20px;
+	font-weight: bold;
+	color: hsl(322, 70%, 45%);
+}
+
+/* Ensure hidden grid and message stay hidden */
+.product-grid[hidden],
+#noProducts[hidden] {
+	display: none !important;
+}
+
+/* Premium Badge */
+.premium-badge {
+	display: inline-block;
+	background-color: hsl(322, 70%, 45%);
+	color: white;
+	padding: 5px 10px;
+	font-size: 12px;
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+/* Mobile Search Controls */
+@media (max-width: 575px) {
+	.search-sort-controls {
+		flex-direction: column;
 	}
 }
