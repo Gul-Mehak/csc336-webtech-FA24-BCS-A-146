@@ -339,3 +339,77 @@ footer p {
 .category-filter:has(#formal:checked) .product-grid > :not(.formal) {
 	display: none;
 }
+/* ==========================================
+   MIDTERM TASK 2 - CSS GRID PRODUCT LAYOUT
+   ========================================== */
+
+/* Mobile Layout: Below 646px */
+.product-layout {
+	display: grid;
+
+	grid-template-columns: 1fr;
+
+	grid-template-areas:
+		"image"
+		"details"
+		"description";
+
+	gap: 30px;
+}
+
+/* Named Grid Areas */
+.product-image-area {
+	grid-area: image;
+}
+
+.product-details-area {
+	grid-area: details;
+}
+
+.product-description-area {
+	grid-area: description;
+}
+
+/* Product Image */
+.product-image-area .product-detail-img {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+/* Description */
+.product-description-area {
+	padding-top: 20px;
+}
+
+.product-description-area h2 {
+	font-size: 28px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+
+/* Desktop Layout: 646px and Above */
+@media (min-width: 646px) {
+
+	.product-layout {
+		grid-template-columns: 1fr 1fr;
+
+		grid-template-areas:
+			"image details"
+			"description description";
+
+		gap: 40px;
+	}
+
+	/* Keep Details Sticky While Scrolling */
+	.product-details-area {
+		position: sticky;
+		top: 76px;
+		align-self: start;
+	}
+
+	/* Give Image Area Enough Height for Sticky Effect */
+	.product-image-area {
+		min-height: 100vh;
+	}
+}
