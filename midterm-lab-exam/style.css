@@ -174,8 +174,8 @@ footer p {
 		font-size: 22px;
 	}
 }
-    /* Product Detail Page */
 
+/* Product Detail Page */
 .product-detail-img {
 	height: 550px;
 	object-fit: cover;
@@ -244,8 +244,8 @@ footer p {
 		font-size: 15px;
 	}
 }
-/* Responsive Navbar */
 
+/* Responsive Navbar */
 .navbar-toggler {
 	border: 1px solid #dddddd;
 	border-radius: 0;
@@ -277,4 +277,65 @@ footer p {
 		text-align: center;
 		padding-bottom: 10px;
 	}
+}
+
+
+/* ==========================================
+   MIDTERM TASK 1 - CSS CATEGORY FILTER
+   ========================================== */
+
+/* Category Filter Container */
+.category-filter {
+	--accent: hsl(322, 70%, 45%);
+	text-align: center;
+}
+
+/* Hide Radio Buttons Visually */
+.category-filter > input[type="radio"] {
+	position: absolute;
+	opacity: 0;
+}
+
+/* Style Category Labels */
+.category-filter > label {
+	display: inline-block;
+	padding: 10px 20px;
+	margin: 5px;
+	border: 1px solid #dddddd;
+	background-color: #ffffff;
+	color: #222222;
+	cursor: pointer;
+}
+
+/* Highlight Selected Category */
+.category-filter > input[type="radio"]:checked + label {
+	background-color: var(--accent);
+	color: white;
+	border-color: var(--accent);
+}
+
+/* Space Between Filters and Product Grid */
+.product-grid {
+	margin-top: 25px;
+	text-align: left;
+}
+
+/* Lawn Filter */
+.category-filter:has(#lawn:checked) .product-grid > :not(.lawn) {
+	display: none;
+}
+
+/* Kurtas Filter */
+.category-filter:has(#kurtas:checked) .product-grid > :not(.kurtas) {
+	display: none;
+}
+
+/* Casual Filter */
+.category-filter:has(#casual:checked) .product-grid > :not(.casual) {
+	display: none;
+}
+
+/* Formal Filter */
+.category-filter:has(#formal:checked) .product-grid > :not(.formal) {
+	display: none;
 }

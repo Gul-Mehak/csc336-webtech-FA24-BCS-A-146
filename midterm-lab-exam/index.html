@@ -14,41 +14,40 @@
 
 <body>
 
-<!-- Header -->
-<header>
-	<nav class="navbar navbar-expand-lg navbar-light bg-white">
-		<div class="container">
+	<!-- Header -->
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-white">
+			<div class="container">
 
-			<a class="navbar-brand" href="index.html">ZARIYA</a>
+				<a class="navbar-brand" href="index.html">ZARIYA</a>
 
-			<!-- Mobile Menu Button -->
-			<button class="navbar-toggler" type="button"
-				data-bs-toggle="collapse"
-				data-bs-target="#navbarMenu"
-				aria-controls="navbarMenu"
-				aria-expanded="false"
-				aria-label="Toggle navigation">
+				<!-- Mobile Menu Button -->
+				<button class="navbar-toggler" type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarMenu"
+					aria-controls="navbarMenu"
+					aria-expanded="false"
+					aria-label="Toggle navigation">
 
-				<span class="navbar-toggler-icon"></span>
+					<span class="navbar-toggler-icon"></span>
+				</button>
 
-			</button>
+				<!-- Navigation Links -->
+				<div class="collapse navbar-collapse" id="navbarMenu">
 
-			<!-- Navigation Links -->
-			<div class="collapse navbar-collapse" id="navbarMenu">
+					<div class="navbar-nav mx-auto">
+						<a class="nav-link" href="index.html">Home</a>
+						<a class="nav-link" href="index.html#products">Shop</a>
+						<a class="nav-link" href="#footer">Contact</a>
+					</div>
 
-				<div class="navbar-nav mx-auto">
-					<a class="nav-link" href="index.html">Home</a>
-					<a class="nav-link" href="index.html#products">Shop</a>
-					<a class="nav-link" href="#footer">Contact</a>
+					<span class="cart-icon">🛒</span>
+
 				</div>
 
-				<span class="cart-icon">🛒</span>
-
 			</div>
-
-		</div>
-	</nav>
-</header>
+		</nav>
+	</header>
 
 	<!-- Banner -->
 	<section class="banner text-center">
@@ -62,107 +61,132 @@
 
 		<h2 class="text-center mb-4">Our Collection</h2>
 
-		<div class="row g-4">
+		<!-- Task 1: CSS-only Category Filter -->
+		<div class="category-filter">
 
-			<!-- Product 1 -->
-			<div class="col-12 col-md-6 col-lg-3">
-				<div class="card h-100">
-					<a href="product.html">
-						<img src="images/product1.webp" class="card-img-top" alt="Printed Lawn Suit">
-					</a>
-					<div class="card-body text-center">
-						<h5 class="card-title">Printed Lawn Suit</h5>
-						<p class="card-text">Rs. 4,500</p>
-						<a href="product.html" class="btn btn-dark">Add to Cart</a>
+			<!-- Radio Buttons -->
+			<input type="radio" name="category" id="all" checked>
+			<label for="all">All</label>
+
+			<input type="radio" name="category" id="lawn">
+			<label for="lawn">Lawn</label>
+
+			<input type="radio" name="category" id="kurtas">
+			<label for="kurtas">Kurtas</label>
+
+			<input type="radio" name="category" id="casual">
+			<label for="casual">Casual</label>
+
+			<input type="radio" name="category" id="formal">
+			<label for="formal">Formal</label>
+
+			<!-- Product Grid -->
+			<div class="row g-4 product-grid">
+
+				<!-- Product 1: Lawn -->
+				<div class="col-12 col-md-6 col-lg-3 lawn">
+					<div class="card h-100">
+						<a href="product.html">
+							<img src="images/product1.webp" class="card-img-top" alt="Printed Lawn Suit">
+						</a>
+						<div class="card-body text-center">
+							<h5 class="card-title">Printed Lawn Suit</h5>
+							<p class="card-text">Rs. 4,500</p>
+							<a href="product.html" class="btn btn-dark">Add to Cart</a>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<!-- Product 2 -->
-			<div class="col-12 col-md-6 col-lg-3">
-				<div class="card h-100">
-					<img src="images/product2.webp" class="card-img-top" alt="Embroidered Kurta">
-					<div class="card-body text-center">
-						<h5 class="card-title">Embroidered Kurta</h5>
-						<p class="card-text">Rs. 5,200</p>
-						<button class="btn btn-dark">Add to Cart</button>
+				<!-- Product 2: Kurtas -->
+				<div class="col-12 col-md-6 col-lg-3 kurtas">
+					<div class="card h-100">
+						<img src="images/product2.webp" class="card-img-top" alt="Embroidered Kurta">
+						<div class="card-body text-center">
+							<h5 class="card-title">Embroidered Kurta</h5>
+							<p class="card-text">Rs. 5,200</p>
+							<button class="btn btn-dark">Add to Cart</button>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<!-- Product 3 -->
-			<div class="col-12 col-md-6 col-lg-3">
-				<div class="card h-100">
-					<img src="images/product3.jfif" class="card-img-top" alt="Cotton Shirt">
-					<div class="card-body text-center">
-						<h5 class="card-title">Cotton Shirt</h5>
-						<p class="card-text">Rs. 3,200</p>
-						<button class="btn btn-dark">Add to Cart</button>
+				<!-- Product 3: Casual -->
+				<div class="col-12 col-md-6 col-lg-3 casual">
+					<div class="card h-100">
+						<img src="images/product3.jfif" class="card-img-top" alt="Cotton Shirt">
+						<div class="card-body text-center">
+							<h5 class="card-title">Cotton Shirt</h5>
+							<p class="card-text">Rs. 3,200</p>
+							<button class="btn btn-dark">Add to Cart</button>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<!-- Product 4 -->
-			<div class="col-12 col-md-6 col-lg-3">
-				<div class="card h-100">
-					<img src="images/product4.jfif" class="card-img-top" alt="Printed 2-Piece Suit">
-					<div class="card-body text-center">
-						<h5 class="card-title">Printed 2-Piece Suit</h5>
-						<p class="card-text">Rs. 6,000</p>
-						<button class="btn btn-dark">Add to Cart</button>
+				<!-- Product 4: Casual -->
+				<div class="col-12 col-md-6 col-lg-3 casual">
+					<div class="card h-100">
+						<img src="images/product4.jfif" class="card-img-top" alt="Printed 2-Piece Suit">
+						<div class="card-body text-center">
+							<h5 class="card-title">Printed 2-Piece Suit</h5>
+							<p class="card-text">Rs. 6,000</p>
+							<button class="btn btn-dark">Add to Cart</button>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<!-- Product 5 -->
-			<div class="col-12 col-md-6 col-lg-3">
-				<div class="card h-100">
-					<img src="images/product5.jfif" class="card-img-top" alt="Lawn 3-Piece Suit">
-					<div class="card-body text-center">
-						<h5 class="card-title">Lawn 3-Piece Suit</h5>
-						<p class="card-text">Rs. 7,500</p>
-						<button class="btn btn-dark">Add to Cart</button>
+				<!-- Product 5: Lawn -->
+				<div class="col-12 col-md-6 col-lg-3 lawn">
+					<div class="card h-100">
+						<img src="images/product5.jfif" class="card-img-top" alt="Lawn 3-Piece Suit">
+						<div class="card-body text-center">
+							<h5 class="card-title">Lawn 3-Piece Suit</h5>
+							<p class="card-text">Rs. 7,500</p>
+							<button class="btn btn-dark">Add to Cart</button>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<!-- Product 6 -->
-			<div class="col-12 col-md-6 col-lg-3">
-				<div class="card h-100">
-					<img src="images/product6.webp" class="card-img-top" alt="Casual Kurti">
-					<div class="card-body text-center">
-						<h5 class="card-title">Casual Kurti</h5>
-						<p class="card-text">Rs. 2,800</p>
-						<button class="btn btn-dark">Add to Cart</button>
+				<!-- Product 6: Kurtas -->
+				<div class="col-12 col-md-6 col-lg-3 kurtas">
+					<div class="card h-100">
+						<img src="images/product6.webp" class="card-img-top" alt="Casual Kurti">
+						<div class="card-body text-center">
+							<h5 class="card-title">Casual Kurti</h5>
+							<p class="card-text">Rs. 2,800</p>
+							<button class="btn btn-dark">Add to Cart</button>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<!-- Product 7 -->
-			<div class="col-12 col-md-6 col-lg-3">
-				<div class="card h-100">
-					<img src="images/product7.jfif" class="card-img-top" alt="Embroidered 3-Piece">
-					<div class="card-body text-center">
-						<h5 class="card-title">Embroidered 3-Piece</h5>
-						<p class="card-text">Rs. 8,500</p>
-						<button class="btn btn-dark">Add to Cart</button>
+				<!-- Product 7: Formal -->
+				<div class="col-12 col-md-6 col-lg-3 formal">
+					<div class="card h-100">
+						<img src="images/product7.jfif" class="card-img-top" alt="Embroidered 3-Piece">
+						<div class="card-body text-center">
+							<h5 class="card-title">Embroidered 3-Piece</h5>
+							<p class="card-text">Rs. 8,500</p>
+							<button class="btn btn-dark">Add to Cart</button>
+						</div>
 					</div>
 				</div>
-			</div>
 
-			<!-- Product 8 -->
-			<div class="col-12 col-md-6 col-lg-3">
-				<div class="card h-100">
-					<img src="images/product8.jfif" class="card-img-top" alt="Formal Pret Suit">
-					<div class="card-body text-center">
-						<h5 class="card-title">Formal Pret Suit</h5>
-						<p class="card-text">Rs. 9,200</p>
-						<button class="btn btn-dark">Add to Cart</button>
+				<!-- Product 8: Formal -->
+				<div class="col-12 col-md-6 col-lg-3 formal">
+					<div class="card h-100">
+						<img src="images/product8.jfif" class="card-img-top" alt="Formal Pret Suit">
+						<div class="card-body text-center">
+							<h5 class="card-title">Formal Pret Suit</h5>
+							<p class="card-text">Rs. 9,200</p>
+							<button class="btn btn-dark">Add to Cart</button>
+						</div>
 					</div>
 				</div>
+
 			</div>
+			<!-- End Product Grid -->
 
 		</div>
+		<!-- End Category Filter -->
+
 	</section>
 
 	<!-- Footer -->
@@ -172,6 +196,8 @@
 		<p>Contact: support@example.com</p>
 		<p>&copy; 2026 Khaadi Inspired Store. Educational Project.</p>
 	</footer>
+
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
